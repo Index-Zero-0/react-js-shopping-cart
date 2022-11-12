@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Titillium Web", sans-serif;
+	box-sizing: border-box;
+}
+
+:root {
+	--main-color: #065a82;
+	--text-color: #232323;
+	--secondary-color: #0797b0;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar {
+	flex-basis: 100%;
+	background-color: var(--main-color);
+	padding: 15px 2rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbar .logo {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.btn {
+	border: none;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+.shopping-cart-btn {
+	color: #fff;
+	display: flex;
+}
+
+.product-count {
+	margin-top: -5px;
+	width: 20px;
+	height: 20px;
+	border-radius: 12px;
+	background-color: var(--secondary-color);
+	overflow: hidden;
+}
+
+main {
+	width: 80%;
+	margin: auto;
+	padding: 2rem 0;
+}
+
+.title {
+	margin: 2rem 0;
+}
+
+.products {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	height: 550px;
+	flex-basis: 25%;
+	padding: 10px;
+	border: 4px solid #fff;
+	background-color: #eee;
+	position: relative;
+	overflow: hidden;
+}
+
+.product > * {
+	color: var(--text-color);
+}
+
+.product-image {
+	display: block;
+	width: 100%;
+	height: 55%;
+	object-fit: contain;
+	background-color: #fff;
+}
+
+.product-name {
+	margin-top: 10px;
+}
+
+.rating {
+	display: flex;
+}
+
+.star {
+	width: 1.2rem;
+	height: 1.2rem;
+	position: relative;
+}
+
+.starEmpty,
+.starFull {
+	font-size: 1.2rem;
+	position: absolute;
+	overflow: hidden;
+	color: var(--secondary-color);
+}
+
+.product-price {
+	display: block;
+	margin: 10px 0;
+	justify-self: flex-end;
+}
+
+.buttons {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity 0.5s;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000044;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.product:hover .buttons {
+	opacity: 1;
+}
+
+.buttons .btn {
+	margin-right: 1rem;
+	background-color: #dddddd;
+	padding: 10px 20px;
+	width: 50%;
+	font-size: 1rem;
+	border-radius: 3px;
+}
+
+.buttons .btn:hover {
+	background-color: var(--main-color);
+	color: #fff;
+}
